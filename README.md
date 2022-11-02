@@ -30,3 +30,4 @@ Además, para el contenido ya visto puedo:
 ¿Qué hago si me ha gustado mucho una película que he visto? La añado a mi lista de contenido ya visto y le doy me gusta. Así, cuando estemos charlando en el bar y me pregunten «¿qué película me recomendarías ver?», pueda responder con tan solo consultar mi lista de películas vistas que me han gustado en ***Remembilm***. 
 
 ## :wrench: Creación y configuración del repositorio :gear:
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 0](docs/Hito-0/Hito-0.md), que versa sobre la puesta a punto de las herramientas que se van a usar para comunicar los objetivos, los ejercicios y las prácticas durante el resto del curso.
