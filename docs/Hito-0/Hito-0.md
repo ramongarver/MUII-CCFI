@@ -1,5 +1,7 @@
 # [Hito 0]( http://jj.github.io/CC/documentos/proyecto/0.Repositorio): Descripción del problema a resolver usando correctamente git y GitHub
 
+Esta hito engloba todas las tareas necesarias para tener un entorno de trabajo preparado, usando la tecnología *git* y la forja *GitHub*, en el que podamos desarrollar un proyecto bajo licencia.
+
 ## Creación de par de claves y subida de clave pública a GitHub
 Para la generación del par de clave pública y clave privada y la posterior adición de la clave pública a GitHub se ha utilizado la siguiente [guía](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
@@ -63,4 +65,14 @@ Además de haber configurado el método principal de autenticación con la aplic
 
 ![Métodos de autenticación para el doble factor](img/two-factor-authentication-methods.png)
 
+## Configuración del repositorio
 
+- El proyecto está bajo una licencia de tipo [General Public License (GPLv3)](https://www.gnu.org/licenses/gpl-3.0) que ha sido incluida en el repositorio. El archivo que hace referencia a la misma se denomina [LICENSE](../../LICENSE) y está en la raíz del repositorio. 
+> [GPLv3](https://www.gnu.org/licenses/gpl-3.0) es una licencia de derecho de autor ampliamente usada en el mundo del software libre y código abierto. Garantiza a los usuarios finales (personas, organizaciones, compañías) la libertad de usar, estudiar, compartir (copiar) y modificar el software. Su propósito es doble: declarar que el software cubierto por esta licencia es libre, y protegerlo (mediante una práctica conocida como copyleft) de intentos de apropiación que restrinjan esas libertades a nuevos usuarios cada vez que la obra es distribuida, modificada o ampliada.
+
+- El proyecto tiene un archivo de configuración de tipo [.gitignore](../../.gitignore) que permite ignorar archivos que, en base a las tecnologías que se utilicen, no se deben subir al repositorio. Ahora mismo está configurado para ignorar archivos relativos al desarrollo con tecnologías basadas en Javascript/Typescript.
+
+- La idea es realizar el trabajo en base a la siguiente metodología:
+  - **Ramas independientes por cada uno de los hitos**. Para mantener siempre una versión completa y funcional del proyecto se creará una rama por cada uno de los hitos. El objetivo es poder ir trabajando de forma que no se genere ninguna versión incompleta en la rama principal.  
+  También, existirá una rama denominada *codefest* donde se añadirán mejoras al proyecto. Estas mejoras no implican la adición de ninguna funcionalidad requerida en el desarrollo de las prácticas, sino que están relacionadas con trabajo voluntario en relación a pequeñas mejoras.
+  - **Creación de issues en relación a las tareas y los objetivos**. Para llevar un seguimiento adecuado de los *issues* del proyecto es importante crearlos en el repositorio y mantener el estado de los mismo actualizado.
