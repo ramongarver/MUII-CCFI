@@ -75,4 +75,4 @@ Además de haber configurado el método principal de autenticación con la aplic
 - La idea es realizar el trabajo en base a la siguiente metodología:
   - **Ramas independientes por cada uno de los hitos**. Para mantener siempre una versión completa y funcional del proyecto se creará una rama por cada uno de los hitos. El objetivo es poder ir trabajando de forma que no se genere ninguna versión incompleta en la rama principal.  
   También, existirá una rama denominada *codefest* donde se añadirán mejoras al proyecto. Estas mejoras no implican la adición de ninguna funcionalidad requerida en el desarrollo de las prácticas, sino que están relacionadas con trabajo voluntario en relación a pequeñas mejoras.
-  - **Creación de issues en relación a las tareas y los objetivos**. Para llevar un seguimiento adecuado de los *issues* del proyecto es importante crearlos en el repositorio y mantener el estado de los mismo actualizado.
+  - **Creación de issues en relación a las tareas y los objetivos**. Para llevar un seguimiento adecuado de los *issues* del proyecto es importante crearlos en el repositorio y mantener el estado de los mismos actualizado.
