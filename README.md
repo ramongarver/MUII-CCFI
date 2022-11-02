@@ -27,7 +27,32 @@ Además, para el contenido ya visto puedo:
 
 ¿Qué hago si un amigo me recomienda una película? La añado a mi lista de películas para ver, para que el domingo por la tarde, cuando esté sentado en mi sofá, con tan solo consultar ***Remembilm*** sepa el nombre de la película.
 
-¿Qué hago si me ha gustado mucho una película que he visto? La añado a mi lista de contenido ya visto y le doy me gusta. Así, cuando estemos charlando en el bar y me pregunten «¿qué película me recomendarías ver?», pueda responder con tan solo consultar mi lista de películas vistas que me han gustado en ***Remembilm***. 
+¿Qué hago si me ha gustado mucho una película que he visto? La añado a mi lista de contenido ya visto y le doy me gusta. Así, cuando estemos charlando en el bar y me pregunten «¿qué película me recomendarías ver?», pueda responder con tan solo consultar mi lista de películas vistas que me han gustado en ***Remembilm***.
+
+### Lógica de negocio
+
+La solución de esta aplicación expone una lógica de negocio sencilla a la par que valiosa. Se fundamenta en la posibilidad, por parte de los usuarios, de consultar películas y series y llevar un seguimiento de visualización de las mismas, pudiendo valorarlas tanto positiva como negativamente.
+
+La aplicación obtiene la información de las películas y series de una API pública y se encarga de mostrarla al usuario de forma sencilla y amigable, permitiéndole interacturar con ella. 
+
+Para poder llevar un seguimiento del contenido es necesario que el usuario inicie sesión. Una vez el usuario esté identificado podrá añadir películas a sus listas y dar sus valoraciones. Esta información se almacena en una base de datos.
+
+A la aplicación se puede acceder desde cualquier dispositivo.
+
+### ¿Por qué la aplicación es susceptible de ser desplegada en la nube?
+
+Como se puede observar, existen partes bien diferenciadas de la aplicación como: 
+- Cliente, *frontend*;
+- Servicios y lógica de la aplicación, *backend* (autenticación, catálogo o seguimiento);
+- Base de datos, *data persistence*;  
+las cuales ofrecen una gran oportunidad para utilizar el paradigma de *Cloud Computing*.
+
+Por ejemplo:
+- Para la autenticación de los usuarios se podría crear y desplegar un microservicio independiente que nos provea de este servicio. De esta forma, si en algún momento se cae el servicio, es decir, si en algún momento deja de funcionar la autenticación, los usuarios podrán seguir consultando el catálogo de películas y series, que funciona con un microservicio independiente, aunque no puedan realizar el seguimiento de las mismas.  
+- Al tener desacoplados el cliente (frontend) y el servidor (backend) se pueden crear clientes independientes para dispositivos de diferente tipo. Por ejemplo, se podría crear una aplicación móvil nativa para los usuarios que utilicen móvil, aunque se siguiera manteniendo la aplicación web para los usuarios que accedan desde su ordenador.
+- Queremos que la aplicación sea accesible desde cualquier lugar.
+- Queremos que la aplicación aumente el número de recursos que utiliza mientras sea necesario si llegan muchos usuarios.
+
 
 ## :wrench: Creación y configuración del repositorio :gear:
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 0](docs/Hito-0/Hito-0.md), que versa sobre la puesta a punto de las herramientas que se van a usar para comunicar los objetivos, los ejercicios y las prácticas durante el resto del curso.
