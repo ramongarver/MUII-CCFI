@@ -65,7 +65,15 @@ Además de haber configurado el método principal de autenticación con la aplic
 
 ![Métodos de autenticación para el doble factor](img/two-factor-authentication-methods.png)
 
-## Configuración del repositorio
+## Creación y configuración de los repositorios
+
+### Creación de los repositorios
+
+Para la realización de las prácticas debemos hacer fork del repositorio de esta asignatura y crear el repositorio asociado a nuestro proyecto:
+- [Fork del repositorio de la asignatura de Cloud Computing](https://github.com/ramongarver/CC-22-23): Este repositorio contiene la información de las prácticas de la asignatura: hitos que se van a desarrollar, plazos de entrega, proyectos de los estudiantes y recursos de ayuda.
+- [Repositorio del proyecto](https://github.com/ramongarver/MUII-CCFI/): Este repositorio contiene tanto la documentación como el software en sus diferentes fases del proyecto que se va a realizar a lo largo de las prácticas.
+
+### Configuración del repositorio del proyecto
 
 - El proyecto está bajo una licencia de tipo [General Public License (GPLv3)](https://www.gnu.org/licenses/gpl-3.0) que ha sido incluida en el repositorio. El archivo que hace referencia a la misma se denomina [LICENSE](../../LICENSE) y está en la raíz del repositorio. 
 > [GPLv3](https://www.gnu.org/licenses/gpl-3.0) es una licencia de derecho de autor ampliamente usada en el mundo del software libre y código abierto. Garantiza a los usuarios finales (personas, organizaciones, compañías) la libertad de usar, estudiar, compartir (copiar) y modificar el software. Su propósito es doble: declarar que el software cubierto por esta licencia es libre, y protegerlo (mediante una práctica conocida como copyleft) de intentos de apropiación que restrinjan esas libertades a nuevos usuarios cada vez que la obra es distribuida, modificada o ampliada.
@@ -76,3 +84,6 @@ Además de haber configurado el método principal de autenticación con la aplic
   - **Ramas independientes por cada uno de los hitos**. Para mantener siempre una versión completa y funcional del proyecto se creará una rama por cada uno de los hitos. El objetivo es poder ir trabajando de forma que no se genere ninguna versión incompleta en la rama principal.  
   También, existirá una rama denominada *codefest* donde se añadirán mejoras al proyecto. Estas mejoras no implican la adición de ninguna funcionalidad requerida en el desarrollo de las prácticas, sino que están relacionadas con trabajo voluntario en relación a pequeñas mejoras.
   - **Creación de issues en relación a las tareas y los objetivos**. Para llevar un seguimiento adecuado de los *issues* del proyecto es importante crearlos en el repositorio y mantener el estado de los mismos actualizado.
+
+## Descripción del proyecto
+La descripción del proyecto se encuentra en el archivo de documentación principal del mismo. Dicho archivo, cuyo nombre es [README.md](https://github.com/ramongarver/MUII-CCFI/blob/Hito-0/README.md) está en la raíz del repositorio.
