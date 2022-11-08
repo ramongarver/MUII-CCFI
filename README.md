@@ -44,7 +44,7 @@ A la aplicación se puede acceder desde cualquier dispositivo.
 Como se puede observar, existen partes bien diferenciadas de la aplicación como: 
 - Cliente, *frontend*;
 - Servicios y lógica de la aplicación, *backend* (autenticación, catálogo o seguimiento);
-- Base de datos, *data persistence* (información sobre usuarios, observación);
+- Base de datos, *data persistence* (información sobre usuarios u observación);
 
 las cuales ofrecen una gran oportunidad para utilizar el paradigma de *Cloud Computing*.
 
