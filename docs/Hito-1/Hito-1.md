@@ -47,3 +47,16 @@ En la aplicación solo existirá un tipo de usuario ya que no proceden ni roles 
 🚩 [Hito-6](https://github.com/ramongarver/MUII-CCFI/milestone/7): __Sincronización entre dispositivos__  
 &emsp;&emsp; 🪧 A través de este MVP el usuario podrá autenticarse y ver sus listas sincronizadas en diferentes dispositivos.  
 &emsp;&emsp; 🎯 El objetivo principal es permitir que el usuario no sea dependiente de un dispositivo en concreto. Es decir, que un usuario pueda actualizar sus listas desde un móvil, desde un portátil o, en definitiva, desde cualquier dispositivo, a través del cual tenga acceso a la aplicación y se pueda autenticar, y esas actualizaciones aparezcan en otros.  
+
+## Creación de estructuras de datos, clases y componentes
+
+Con respecto a la parte relacionada el avance en la creación de las escructuras de datos y clases que se van a implementar a lo largo del proyecto, se ha realizado la implementación de varios componentes
+- Encabezado (`Header.jsx`). Sirve para mostrar información sobre la aplicación, en este caso el título. 
+- Componentes para mostrar el contenido. Sirven para mostrar las películas y series de diferentes formas y con diferente información. Ahora mismo, poseen los siguientes atributos: _portada, título, tipo (Película | Serie), género, descripción, director, año de estreno y puntuación._
+    - `Card.jsx` es el componente situado a la izquierda en la previsualización.
+    - `Content.jsx` es el componente situado a la derecha en la previsualización.
+
+### Previsualización de la interfaz de usuario con los componentes creados
+
+![Previsualizacón de los componentes diseñados](img/components.png)
+
