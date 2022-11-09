@@ -1,6 +1,6 @@
 # [Hito 1](http://jj.github.io/CC/documentos/proyecto/1.Infraestructura): Concretando y planificando el proyecto
 
-Esta hito engloba todas las tareas necesarias para definir un proyecto y organizar los hitos para el trabajo en el mismo, así como para avanzar en lo posible en el interfaz y estructuras de datos de la clases iniciales que se vayan a implementar.
+Este hito engloba todas las tareas necesarias para definir un proyecto y organizar los hitos para el trabajo en el mismo, así como para avanzar en lo posible en el interfaz y estructuras de datos de la clases iniciales que se vayan a implementar.
 
 ## Historias de usuario
 
