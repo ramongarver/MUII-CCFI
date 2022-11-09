@@ -55,4 +55,9 @@ Por ejemplo:
 
 
 ## :wrench: Creación y configuración del repositorio :gear:
+
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 0](docs/Hito-0/Hito-0.md), que versa sobre la puesta a punto de las herramientas que se van a usar para comunicar los objetivos, los ejercicios y las prácticas durante el resto del curso.
+
+## 🚩 Historias de usuario, milestones y primeras clases 📋
+
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 1](docs/Hito-1/Hito-1.md), que versa sobre la definición del proyecto y su alcance a través de historias de usuario y _milestones_, su organización basada en estos elementos y la creación de las estructuras de datos de las clases iniciales que se van a implementar en el proyecto.
