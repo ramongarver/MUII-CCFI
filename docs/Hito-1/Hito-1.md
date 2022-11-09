@@ -17,3 +17,33 @@ Esta hito engloba todas las tareas necesarias para definir un proyecto y organiz
 En la aplicación solo existirá un tipo de usuario ya que no proceden ni roles ni usuarios con permisos especiales de tipo administrador, gestor, etc.
 
 🧑🏽 __Aficionado__ a películas, series y otro contenido en streaming. Está interesado en __consultar el catálogo__ de contenido y en utilizar las __listas para llevar un seguimiento__ de visualización del mismo.
+
+## Milestones
+
+🚩 [Hito-0](https://github.com/ramongarver/MUII-CCFI/milestone/1): __Descripción del proyecto, creación y configuración del repositorio__  
+&emsp;&emsp; 🪧 A través de este MVP el programador tendrá un entorno de trabajo preparado en el que podrá desarrollar un proyecto bajo licencia.  
+&emsp;&emsp; 🎯 El objetivo principal es realizar todas las configuraciones necesarias a nivel de repositorio así como realizar una descripción del proyecto junto a su lógica de negocio.
+
+🚩 [Hito-1](https://github.com/ramongarver/MUII-CCFI/milestone/2): __Definición, organización y configuración inicial del proyecto__  
+&emsp;&emsp; 🪧 A través de este MVP el programador podrá comenzar a desarrollar el proyecto en base a la definición del mismo y su organización.  
+&emsp;&emsp; 🎯 El objetivo principal es definir un proyecto y organizar los hitos para el trabajo en el mismo, así como para avanzar en lo posible en el interfaz y estructuras de datos de la clases iniciales que se vayan a implementar.  
+
+🚩 [Hito-2](https://github.com/ramongarver/MUII-CCFI/milestone/3): __Catálogo de contenidos__  
+&emsp;&emsp; 🪧 A través de este MVP el usuario podrá buscar y consultar los contenidos que existen.  
+&emsp;&emsp; 🎯 El objetivo principal es mostrar al usuario la información primordial de las películas y series (portada, nombre, género, descripción, director y fecha de estreno).  
+
+🚩 [Hito-3](https://github.com/ramongarver/MUII-CCFI/milestone/4): __Lista de contenido para ver__  
+&emsp;&emsp; 🪧 A través de este MVP el usuario podrá añadir y quitar contenido a y de su lista de contenido para ver.  
+&emsp;&emsp; 🎯 El objetivo principal es permitir que el usuario realice un seguimiento del contenido que quiera ver a través de una lista personal.  
+
+🚩 [Hito-4](https://github.com/ramongarver/MUII-CCFI/milestone/5): __Listas de contenido en progreso y ya visto__  
+&emsp;&emsp; 🪧 A través de este MVP el usuario podrá añadir y quitar contenido a y de su listas de contenido en progreso y ya visto.  
+&emsp;&emsp; 🎯 El objetivo principal es permitir que el usuario añada contenido a la lista de en progreso y, una vez los quite de la lista, pasen a la lista de ya vistos (a no ser que el usuario indique lo contrario).  
+
+🚩 [Hito-5](https://github.com/ramongarver/MUII-CCFI/milestone/6): __Sistema de likes y dislikes__  
+&emsp;&emsp; 🪧 A través de este MVP el usuario podrá decir qué contenido del visto le ha gustado o no.  
+&emsp;&emsp; 🎯 El objetivo principal es permitir que el usuario seleccione si un contenido le ha gustado o no cuando pase una película o serie a la lista de «ya visto». De esta forma, podrá ver de un vistazo el contenido que ha visto y que le ha gustado para, por ejemplo, recomendárselo a un amigo.  
+
+🚩 [Hito-6](https://github.com/ramongarver/MUII-CCFI/milestone/7): __Sincronización entre dispositivos__  
+&emsp;&emsp; 🪧 A través de este MVP el usuario podrá autenticarse y ver sus listas sincronizadas en diferentes dispositivos.  
+&emsp;&emsp; 🎯 El objetivo principal es permitir que el usuario no sea dependiente de un dispositivo en concreto. Es decir, que un usuario pueda actualizar sus listas desde un móvil, desde un portátil o, en definitiva, desde cualquier dispositivo, a través del cual tenga acceso a la aplicación y se pueda autenticar, y esas actualizaciones aparezcan en otros.  
