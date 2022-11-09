@@ -14,6 +14,6 @@ Esta hito engloba todas las tareas necesarias para definir un proyecto y organiz
 
 ### Usuarios
 
-En la aplicación solo existirá un tipo de usuario ya que no existen roles ni otro tipo de organizaciones.
+En la aplicación solo existirá un tipo de usuario ya que no proceden ni roles ni usuarios con permisos especiales de tipo administrador, gestor, etc.
 
 🧑🏽 __Aficionado__ a películas, series y otro contenido en streaming. Está interesado en __consultar el catálogo__ de contenido y en utilizar las __listas para llevar un seguimiento__ de visualización del mismo.
