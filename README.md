@@ -62,3 +62,6 @@ A través del siguiente enlace puede acceder a la documentación relativa al [hi
 ## 🚩 Historias de usuario, milestones y primeras clases 📋
 
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 1](docs/Hito-1/Hito-1.md), que versa sobre la definición del proyecto y su alcance a través de [historias de usuario](https://github.com/ramongarver/MUII-CCFI/issues?q=is%3Aopen+is%3Aissue+label%3Auser-story) y [_milestones_](https://github.com/ramongarver/MUII-CCFI/milestones?direction=asc&sort=due_date&state=open), su organización basada en estos elementos y la creación de las estructuras de datos de las clases iniciales que se van a implementar en el proyecto.
+
+## 🚨 Framework de tests, tests unitarios y gestor de dependencias 💣
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 2](docs/Hito-2/Hito-2.md), que versa sobre la elección y configuración de un framework de tests para la posterior implementación y ejecución de los mismos.
