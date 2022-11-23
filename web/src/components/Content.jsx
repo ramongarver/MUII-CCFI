@@ -9,7 +9,7 @@ const Content = () => {
   );
   const [director, setDirector] = useState('Jim Mickle');
   const [year, setYear] = useState('2019');
-  const [punctuation, setPunctuation] = useState('7.2');
+  const [rating, setRating] = useState('7.2');
 
   return (
     <div className="flex-auto py-3 sm:mx-auto sm:max-w-xl">
@@ -25,7 +25,7 @@ const Content = () => {
           <div className="flex items-start justify-between">
             <h2 className="text-3xl font-bold">{title}</h2>
             <div className="rounded-xl bg-yellow-400 p-2 font-bold">
-              {punctuation}
+              {rating}
             </div>
           </div>
           <div>
