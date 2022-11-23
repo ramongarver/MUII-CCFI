@@ -9,7 +9,7 @@ const Card = () => {
   );
   const [director, setDirector] = useState('Jim Mickle');
   const [year, setYear] = useState('2019');
-  const [punctuation, setPunctuation] = useState('7.2');
+  const [rating, setRating] = useState('7.2');
 
   return (
     <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
@@ -27,7 +27,7 @@ const Card = () => {
               {type}
             </div>
             <span className="flex-none rounded-xl bg-yellow-400 p-2 font-bold">
-              {punctuation}
+              {rating}
             </span>
           </div>
           <a
