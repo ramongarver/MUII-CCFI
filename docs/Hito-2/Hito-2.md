@@ -116,3 +116,20 @@ Ejecución de los paquetes de pruebas en modo por cobertura (_coverage_): `pnpm 
 ![Comparación de los marcos de trabajo para pruebas](./img/pnpm-test-cov.png)
 
 Desde mi punto de vista, lo más interesante es conocer la __cobertura de código__, que es una métrica con la que se puede saber qué parte del código fuente se ha sometido a alguna prueba. Por ende, gracias a esta información, es posible aumentar la cobertura de código y reforzar las pruebas en los módulos que tengan menor cobertura. En proyectos en los que se aplique TDD la cobertura debería ser total.
+
+## Uso de la API
+Para acceder a la documentación de la API, hay que ir a la siguiente url: [`http://localhost:3000/api`](http://localhost:3000/api).
+
+![Documentación de la API](./img/api-documentation.png)
+
+Por ejemplo, si queremos obtener todos los contenidos (series y películas), habría que realizar una petición  `GET /contents` (se puede realizar desde la página de la documentación).
+
+```bash
+curl -X 'GET' \
+  'http://localhost:3000/contents' \
+  -H 'accept: application/json'
+```
+
+![Petición GET /contents](./img/api-get-contents.png)
+
+Se puede observar que la respuesta es exitosa porque devuelve un `CODE 201` y tres contenidos: dos películas y una serie.
