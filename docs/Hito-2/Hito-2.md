@@ -5,8 +5,8 @@ Este hito engloba todas las tareas necesarias para establecer y configurar un fr
 ## Gestores de paquetes y dependencias
 
 Los gestores de paquetes que se ha valorado utilizar son:
-- __yarn__: 
-- __npm__: un gestor de paquetes y dependencias para la plataforma _Node.js_. Ubica los módulos en su lugar (en el directorio `node_modules`) para que _Node.js_ pueda encontrarlos, y gestiona los conflictos de dependencias siguiendo una estrategia denominada hoisting. Es ampliamente configurable para soportar una amplia variedad de casos de uso. Lo más habitual es que se utilice para publicar, descubrir, instalar y desarrollar programas de Node
+- __npm__: un gestor de paquetes y dependencias para la plataforma _Node.js_. Ubica los módulos en su lugar (en el directorio `node_modules`) para que _Node.js_ pueda encontrarlos, y gestiona los conflictos de dependencias siguiendo una estrategia denominada hoisting. Es ampliamente configurable para soportar una amplia variedad de casos de uso. Lo más habitual es que se utilice para publicar, descubrir, instalar y desarrollar programas de _Node.js_.
+- __yarn__: Yarn es un gestor de paquetes para _Node.js_ que se centra en la velocidad, la seguridad y la consistencia. Fue creado originalmente para resolver algunos problemas con el popular gestor de paquetes _npm_.
 - __pnpm__: Es una versión mejorada de _npm_, _pnpm_ proviene de **p**erformant-**npm**. Cambia la estrategia de resolución de dependencias de hoisting a content-addressable storage.
 
 Se ha elegido el gestor de paquetes y dependencias _pnpm_. Se parece a _npm_ superficialmente porque su uso del CLI es similar, pero la gestión de las dependencias es muy diferente; el algoritmo de _pnpm_ da lugar a un mejor rendimiento, al ahorro de memoria y a la mejor gestión del espacio en disco. El gestor de y dependencias paquetes _yarn_ sigue siendo muy popular, pero se considera legacy y es posible que se deje de dar soporte en un futuro próximo. _Yarn Berry PnP_ es su evolución, pero aún no ha desarrollado lo suficiente como para explotar todo su potencial.
