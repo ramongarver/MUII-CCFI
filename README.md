@@ -1,4 +1,5 @@
 # MUII-CCFI
+
 :books: Repositorio de la asignatura ***Cloud Computing: Fundamentos e Infraestructuras*** del Máster en Ingeniería Informática de la Univerdad de Granada.
 
 :octocat: Proyecto realizado por **Ramón García Verjaga** :octocat:
@@ -33,7 +34,7 @@ Además, para el contenido ya visto puedo:
 
 La solución de esta aplicación expone una lógica de negocio sencilla a la par que valiosa. Se fundamenta en la posibilidad, por parte de los usuarios, de consultar películas y series y llevar un seguimiento de visualización de las mismas, pudiendo valorarlas tanto positiva como negativamente.
 
-La aplicación obtiene la información de las películas y series de una API pública y se encarga de mostrarla al usuario de forma sencilla y amigable, permitiéndole interacturar con ella. 
+La aplicación obtiene la información de las películas y series de una API pública y se encarga de mostrarla al usuario de forma sencilla y amigable, permitiéndole interacturar con ella.
 
 Para poder llevar un seguimiento del contenido es necesario que el usuario inicie sesión. Una vez el usuario esté identificado podrá añadir películas a sus listas y dar sus valoraciones. Esta información se almacena en una base de datos.
 
@@ -41,7 +42,7 @@ A la aplicación se puede acceder desde cualquier dispositivo.
 
 ### ¿Por qué la aplicación es susceptible de ser desplegada en la nube?
 
-Como se puede observar, existen partes bien diferenciadas de la aplicación como: 
+Como se puede observar, existen partes bien diferenciadas de la aplicación como:
 - Cliente, *frontend*;
 - Servicios y lógica de la aplicación, *backend* (autenticación, catálogo o seguimiento);
 - Base de datos, *data persistence* (información sobre usuarios u observación);
@@ -49,11 +50,10 @@ Como se puede observar, existen partes bien diferenciadas de la aplicación como
 las cuales ofrecen una gran oportunidad para utilizar el paradigma de *Cloud Computing*.
 
 Por ejemplo:
-- Para la autenticación de los usuarios se podría crear y desplegar un microservicio independiente que nos provea de este servicio. De esta forma, si en algún momento se cae el servicio, es decir, si en algún momento deja de funcionar la autenticación, los usuarios podrán seguir consultando el catálogo de películas y series, que funciona con un microservicio independiente, aunque no puedan realizar el seguimiento de las mismas.  
+- Para la autenticación de los usuarios se podría crear y desplegar un microservicio independiente que nos provea de este servicio. De esta forma, si en algún momento se cae el servicio, es decir, si en algún momento deja de funcionar la autenticación, los usuarios podrán seguir consultando el catálogo de películas y series, que funciona con un microservicio independiente, aunque no puedan realizar el seguimiento de las mismas.
 - Al tener desacoplados el cliente (frontend) y el servidor (backend) se pueden crear clientes independientes para dispositivos de diferente tipo. Por ejemplo, se podría crear una aplicación móvil nativa para los usuarios que utilicen móvil, aunque se siguiera manteniendo la aplicación web para los usuarios que accedan desde su ordenador.
 - Queremos que la aplicación sea accesible desde cualquier lugar.
 - Queremos que la aplicación aumente el número de recursos que utiliza mientras sea necesario si llegan muchos usuarios.
-
 
 ## :wrench: Creación y configuración del repositorio :gear:
 
@@ -66,3 +66,7 @@ A través del siguiente enlace puede acceder a la documentación relativa al [hi
 ## 🚨 Marco de trabajo para pruebas, metodología de desarrollo y gestor de dependencias 💣
 
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 2](docs/Hito-2/Hito-2.md), que versa sobre la elección y configuración de un framework de tests para la posterior implementación y ejecución de los mismos.
+
+## 🐳 Contenedor para pruebas 📦
+
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 3](docs/Hito-3/Hito-3.md), que versa sobre la elección correcta y justificada de un contenedor para la ejecución de las pruebas y su creación, configuración y publicación en registros de contenedores.
