@@ -88,4 +88,10 @@ Posteriormente se ha creado el repositorio en Docker Hub, [`ramongarver/muii-ccf
 
 ![Creación de un repositorio](./img/docker-hub-repository.png)
 
-Más tarde, se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
+Más tarde, se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api-dockerhub.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
+
+### Uso de otros registros de contenedores
+
+El registro de [**GitHub Container Registry**](https://codefresh.io/csdp-docs/docs/integrations/container-registries/github-cr/) almacena imágenes de contenedores dentro de una organización o cuenta personal, y permite asociar una imagen con un repositorio. Se puede elegir entre heredar los permisos de un repositorio o establecer permisos granulares independientemente de un repositorio. También puede acceder a imágenes de contenedores públicos de forma anónima.
+
+Se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api-ghcr.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
