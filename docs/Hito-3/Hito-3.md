@@ -4,15 +4,16 @@ Este hito engloba todas las tareas necesarias para diseñar, usando Docker, un c
 
 ## Elección del contenedor base
 
-Existen multitud de contenedores basados en Docker, y la elección de uno u otro dependerá tanto de las necesidades de la aplicación como de la infraestructura que se quiera construir entorno a la misma. 
+Existen multitud de contenedores basados en Docker, y la elección de uno u otro dependerá tanto de las necesidades de la aplicación como de la infraestructura que se quiera construir entorno a la misma.
 
 En este caso, en relación a las tecnologías que se usan y a las necesidades de la aplicación, se ha elegido el contenedor [`node:18.12-alpine`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore), que es un contenedor basado en [Alpine Linux](https://www.alpinelinux.org/) y que contiene la versión **18.12** de [Node.js](https://nodejs.org/es/).
 
-Antes de tomar la decisión de utilizar el contenedor [`node:18.12-alpine`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore), también se ha probado el contenedor [`node:18.12`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore) y el contenedor [`node:18.12-slim`](https://hub.docker.com/layers/library/node/18.12-slim/images/sha256-4f2bfa18008f5b8c201df4bfc847b50ed5306bd0ff52343b2c82c568a677575c?context=explore). 
+Antes de tomar la decisión de utilizar el contenedor [`node:18.12-alpine`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore), también se ha probado el contenedor [`node:18.12`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore) y el contenedor [`node:18.12-slim`](https://hub.docker.com/layers/library/node/18.12-slim/images/sha256-4f2bfa18008f5b8c201df4bfc847b50ed5306bd0ff52343b2c82c568a677575c?context=explore).
 
-Son todas imágenes oficiales de [Node.js](https://nodejs.org/es/) y se diferencian en el tamaño del contenedor y en el sistema operativo base. 
-- El contenedor [`node:18.12`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore)  es el contenedor más grande, ya que contiene todo el sistema operativo, además de multitud de herramientas y utilidades adicionales. 
-- El contenedor [`node:18.12-slim`](https://hub.docker.com/layers/library/node/18.12-slim/images/sha256-4f2bfa18008f5b8c201df4bfc847b50ed5306bd0ff52343b2c82c568a677575c?context=explore) es más pequeño que el estándar, ya que contiene una versión reducida del sistema operativo y las herramientas necesarias para ejecutar Node.js. 
+Son todas imágenes oficiales de [Node.js](https://nodejs.org/es/) y se diferencian en el tamaño del contenedor y en el sistema operativo base.
+
+- El contenedor [`node:18.12`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore)  es el contenedor más grande, ya que contiene todo el sistema operativo, además de multitud de herramientas y utilidades adicionales.
+- El contenedor [`node:18.12-slim`](https://hub.docker.com/layers/library/node/18.12-slim/images/sha256-4f2bfa18008f5b8c201df4bfc847b50ed5306bd0ff52343b2c82c568a677575c?context=explore) es más pequeño que el estándar, ya que contiene una versión reducida del sistema operativo y las herramientas necesarias para ejecutar Node.js.
 - El contenedor [`node:18.12-alpine`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore) es el más pequeño, ya que contiene el minimalista y reducido sistema operativo Alpine Linux y las herramientas necesarias para ejecutar Node.js. Debido a lo anterior, con el objetivo de tener una infraestructura lo más ligera posible, se ha elegido el contenedor [`node:18.12-alpine`](https://hub.docker.com/layers/library/node/18.12/images/sha256-5a73d75604f30ec5cc9ed44f2b9fad3beeedc3211a62a8b7ef86b0bfe10ee29b?context=explore) como contenedor base.
 
 Para tratar de determinar cuál es el mejor contenedor base para nuestra aplicación, se han consultado varias fuentes, entre ellas este [artículo](https://snyk.io/blog/choosing-the-best-node-js-docker-image/), del que se ha extraído la tabla que figura a continuación y que ofrece un análisis profundo de las distintas versiones que pueden utilizarse.
@@ -55,3 +56,36 @@ USER node
 
 CMD ["pnpm", "test"]
 ```
+
+Las órdenes del archivo Dockerfile realizan las siguientes tareas:
+
+- `FROM`: Indica el contenedor en el que se basa la imagen que se va a construir.
+- `RUN`:
+- `WORKDIR`:
+- `COPY`:
+- `RUN`:
+- `USER`:
+- `CMD`:
+
+Tras ejecutar el contenedor de pruebas de forma local se obtiene el siguiente resultado:
+
+![Ejecución del contenedor de pruebas](./img/test-container-execution.png)
+
+### Subida de la imagen a Docker Hub
+
+[**Docker Hub**](https://hub.docker.com/) es un servicio proporcionado por Docker para encontrar y compartir imágenes de contenedores. Se trata del mayor repositorio de imágenes de contenedores del mundo, con una gran variedad de fuentes de contenido, incluidos desarrolladores de la comunidad de contenedores, proyectos de código abierto y proveedores de software independientes que crean y distribuyen su código en contenedores.
+
+[**Docker Hub**](https://hub.docker.com/) permite crear tokens de acceso personales como alternativa al acceso por contraseña. El uso de tokens de acceso personales proporciona algunas ventajas sobre una contraseña:
+
+- Se puede investigar el último uso del token de acceso y desactivarlo o eliminarlo si encuentras alguna actividad sospechosa.
+- Cuando se utiliza un token de acceso, no se puede realizar ninguna actividad de administración en la cuenta, incluyendo el cambio de contraseña. Protege tu cuenta si tu ordenador se ve comprometido.
+
+En primer lugar, se ha creado un tokens de acceso con permisos de lectura y escritura sobre repositorios (*Docker Hub → Account Settings → Security → New Access Token*).
+
+![Creación de un token de acceso](./img/docker-hub-access-token.png)
+
+Posteriormente se ha creado el repositorio en Docker Hub, [`ramongarver/muii-ccfi`](https://hub.docker.com/r/ramongarver/muii-ccfi).
+
+![Creación de un repositorio](./img/docker-hub-repository.png)
+
+Más tarde, se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
