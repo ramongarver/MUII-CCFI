@@ -59,13 +59,14 @@ CMD ["pnpm", "test"]
 
 Las órdenes del archivo Dockerfile realizan las siguientes tareas:
 
-- `FROM`: Indica el contenedor en el que se basa la imagen que se va a construir.
-- `RUN`:
-- `WORKDIR`:
-- `COPY`:
-- `RUN`:
-- `USER`:
-- `CMD`:
+- `FROM node:18.12-alpine As development`: Indica el contenedor en el que se basa la imagen que se va a construir.
+- `RUN apk --no-cache add curl`: Descarga e instala `curl`.
+- `RUN curl ...`: Descarga e instala `pnpm`.
+- `WORKDIR`: Especifica el directorio de trabajo.
+- `COPY`: Copia el archivo que contiene las referencias a las dependencias instaladas a través de pnpm.
+- `RUN`: Descargar paquetes indicados en un lockfile a la tienda virtual, el manifiesto de paquetes es ignorado. Los paquetes de desarrollo no se descargan (opción `--prod`).
+- `USER node`: Utiliza un usuario con pocos privilegios y los permisos adecuados para el sistema de archivos.
+- `CMD ["pnpm", "test"]`: Ejecuta los tests de la aplicación.
 
 Tras ejecutar el contenedor de pruebas de forma local se obtiene el siguiente resultado:
 
