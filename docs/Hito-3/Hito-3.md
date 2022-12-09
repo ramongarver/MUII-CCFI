@@ -82,11 +82,11 @@ Tras ejecutar el contenedor de pruebas de forma local se obtiene el siguiente re
 
 En primer lugar, se ha creado un tokens de acceso con permisos de lectura y escritura sobre repositorios (*Docker Hub → Account Settings → Security → New Access Token*).
 
-![Creación de un token de acceso](./img/docker-hub-access-token.png)
+![Creación de un token de acceso](./img/dockerhub-access-token.png)
 
 Posteriormente se ha creado el repositorio en Docker Hub, [`ramongarver/muii-ccfi`](https://hub.docker.com/r/ramongarver/muii-ccfi).
 
-![Creación de un repositorio](./img/docker-hub-repository.png)
+![Creación de un repositorio](./img/dockerhub-repository.png)
 
 Más tarde, se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api-dockerhub.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
 
@@ -95,3 +95,15 @@ Más tarde, se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/
 El registro de [**GitHub Container Registry**](https://codefresh.io/csdp-docs/docs/integrations/container-registries/github-cr/) almacena imágenes de contenedores dentro de una organización o cuenta personal, y permite asociar una imagen con un repositorio. Se puede elegir entre heredar los permisos de un repositorio o establecer permisos granulares independientemente de un repositorio. También puede acceder a imágenes de contenedores públicos de forma anónima.
 
 Se ha creado el [workflow](https://github.com/ramongarver/MUII-CCFI/blob/main/.github/workflows/publish-docker-api-ghcr.yml) para subir la imagen a Docker Hub, que se ejecuta cada vez que se realiza un push en la rama `main` del repositorio de GitHub.
+
+### Ejemplo de ejecución correcta de workflows
+
+![Ejecución correcta de workflows](./img/actions.png)
+
+### Imagen publicada en Docker Hub
+
+![Imagen publicada en Docker Hub](./img/dockerhub-image.png)
+
+### Imagen publicada en GitHub Container Registry
+
+![Imagen publicada en GitHub Container Registry](./img/ghcr-image.png)
