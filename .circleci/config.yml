@@ -8,8 +8,9 @@ jobs:
       - checkout
       - name: Running tests
       - run:
-          command: cd api
-          command: pnpm install-test
+          command: | 
+            cd api
+            pnpm install-test
 
 workflows:
   full-test:
