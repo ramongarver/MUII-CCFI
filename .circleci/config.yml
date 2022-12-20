@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: ramongarver/muii-ccfi:latest:latest
+      - image: ramongarver/muii-ccfi:latest
     steps:
       - checkout
       - run:
