@@ -6,8 +6,8 @@ jobs:
       - image: ramongarver/muii-ccfi:latest
     steps:
       - checkout
-      - name: Running tests
       - run:
+          name: Running tests
           command: | 
             cd api
             pnpm install-test
