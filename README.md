@@ -17,12 +17,14 @@ Somos bombardeados por una gran cantidad de información de nuestro alrededor qu
 ***Remembilm*** nace de la unión de ***Rememb***-er + F-***ilm***. Es una aplicación dirigida a un público general que pretende crear un ecosistema en el que poder llevar el control de las películas y series que queremos ver, estamos viendo o hemos visto.
 
 Como usuario de la aplicación puedo:
+
 - Ver la oferta de películas y series existente.
 - Añadir películas y series a mi lista de contenido para ver.
 - Añadir películas y series a mi lista de contenido en progreso.
 - Añadir películas y series a mi lista de contenido ya visto.
 
 Además, para el contenido ya visto puedo:
+
 - Valorar si me ha gustado, dándole un like. 👍🏽
 - Valorar si no me ha gustado, dándole un dislike. 👎🏽
 
@@ -30,7 +32,7 @@ Además, para el contenido ya visto puedo:
 
 ¿Qué hago si me ha gustado mucho una película que he visto? La añado a mi lista de contenido ya visto y le doy me gusta. Así, cuando estemos charlando en el bar y me pregunten «¿qué película me recomendarías ver?», pueda responder con tan solo consultar mi lista de películas vistas que me han gustado en ***Remembilm***.
 
-### Lógica de negocio
+### 📊 Lógica de negocio 💰
 
 La solución de esta aplicación expone una lógica de negocio sencilla a la par que valiosa. Se fundamenta en la posibilidad, por parte de los usuarios, de consultar películas y series y llevar un seguimiento de visualización de las mismas, pudiendo valorarlas tanto positiva como negativamente.
 
@@ -40,9 +42,10 @@ Para poder llevar un seguimiento del contenido es necesario que el usuario inici
 
 A la aplicación se puede acceder desde cualquier dispositivo.
 
-### ¿Por qué la aplicación es susceptible de ser desplegada en la nube?
+### 🛫 ¿Por qué la aplicación es susceptible de ser desplegada en la nube? ☁️
 
 Como se puede observar, existen partes bien diferenciadas de la aplicación como:
+
 - Cliente, *frontend*;
 - Servicios y lógica de la aplicación, *backend* (autenticación, catálogo o seguimiento);
 - Base de datos, *data persistence* (información sobre usuarios u observación);
@@ -50,18 +53,19 @@ Como se puede observar, existen partes bien diferenciadas de la aplicación como
 las cuales ofrecen una gran oportunidad para utilizar el paradigma de *Cloud Computing*.
 
 Por ejemplo:
+
 - Para la autenticación de los usuarios se podría crear y desplegar un microservicio independiente que nos provea de este servicio. De esta forma, si en algún momento se cae el servicio, es decir, si en algún momento deja de funcionar la autenticación, los usuarios podrán seguir consultando el catálogo de películas y series, que funciona con un microservicio independiente, aunque no puedan realizar el seguimiento de las mismas.
 - Al tener desacoplados el cliente (frontend) y el servidor (backend) se pueden crear clientes independientes para dispositivos de diferente tipo. Por ejemplo, se podría crear una aplicación móvil nativa para los usuarios que utilicen móvil, aunque se siguiera manteniendo la aplicación web para los usuarios que accedan desde su ordenador.
 - Queremos que la aplicación sea accesible desde cualquier lugar.
 - Queremos que la aplicación aumente el número de recursos que utiliza mientras sea necesario si llegan muchos usuarios.
 
-## :wrench: Creación y configuración del repositorio :gear:
+## 🔧 Creación y configuración del repositorio ⚙️
 
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 0](docs/Hito-0/Hito-0.md), que versa sobre la puesta a punto de las herramientas que se van a usar para comunicar los objetivos, los ejercicios y las prácticas durante el resto del curso.
 
 ## 🚩 Historias de usuario, milestones y primeras clases 📋
 
-A través del siguiente enlace puede acceder a la documentación relativa al [hito 1](docs/Hito-1/Hito-1.md), que versa sobre la definición del proyecto y su alcance a través de [historias de usuario](https://github.com/ramongarver/MUII-CCFI/issues?q=is%3Aopen+is%3Aissue+label%3Auser-story) y [_milestones_](https://github.com/ramongarver/MUII-CCFI/milestones?direction=asc&sort=due_date&state=open), su organización basada en estos elementos y la creación de las estructuras de datos de las clases iniciales que se van a implementar en el proyecto.
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 1](docs/Hito-1/Hito-1.md), que versa sobre la definición del proyecto y su alcance a través de [historias de usuario](https://github.com/ramongarver/MUII-CCFI/issues?q=is%3Aopen+is%3Aissue+label%3Auser-story) y [*milestones*](https://github.com/ramongarver/MUII-CCFI/milestones?direction=asc&sort=due_date&state=open), su organización basada en estos elementos y la creación de las estructuras de datos de las clases iniciales que se van a implementar en el proyecto.
 
 ## 🚨 Marco de trabajo para pruebas, metodología de desarrollo y gestor de dependencias 💣
 
@@ -70,3 +74,7 @@ A través del siguiente enlace puede acceder a la documentación relativa al [hi
 ## 🐳 Contenedor para pruebas 📦
 
 A través del siguiente enlace puede acceder a la documentación relativa al [hito 3](docs/Hito-3/Hito-3.md), que versa sobre la elección correcta y justificada de un contenedor para la ejecución de las pruebas y su creación, configuración y publicación en registros de contenedores.
+
+## 🏭 Integración continua 👨‍🏭
+
+A través del siguiente enlace puede acceder a la documentación relativa al [hito 4](docs/Hito-4/Hito-4.md), que versa sobre la elección correcta y justificada de un sistema de integración continua y su configuración para con la aplicación.
