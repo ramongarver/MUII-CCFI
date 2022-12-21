@@ -59,11 +59,33 @@ En la actualidad existen multitud de sistemas de integración continua. A contin
   - Integración limitada con otras herramientas en comparación con otras plataformas CI/CD.
   - No es tan personalizable como otras opciones.
 
+En conclusión, las plataformas de integración continua como CircleCI, Azure y GitHub Actions son opciones aceptables para proyectos de tamaño pequeño. CircleCI destaca por su facilidad de uso y amplia compatibilidad, mientras que Azure es más completa pero más difícil de configurar. GitHub Actions es una opción fácil de usar gracias a su estrecha integración con GitHub, pero tiene menos características que las otras dos plataformas. Al elegir una plataforma de integración continua, es importante considerar las necesidades del proyecto y el equipo, y elegir la opción que ofrezca las características adecuadas y sea fácil de usar. Por ello, y en base a lo explicado anteriormente, elegimos CircleCI y GitHub como las plataformas de integración continua para nuestro proyecto.
+
 ## Creación del sistema de integración continua en CircleCI
 
 Para crear el sistema de integración continua en CircleCI, debemos seguir los siguientes pasos:
 
 1. Crear un [archivo de configuración](https://github.com/ramongarver/MUII-CCFI/blob/main/.circleci/config.yml) de CircleCI en el repositorio de GitHub.
+
+```yml
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: ramongarver/muii-ccfi:latest
+    steps:
+      - checkout
+      - run:
+          name: Running tests
+          command: |
+            cd api
+            pnpm install-test
+workflows:
+  full-test:
+    jobs:
+      - test
+```
 
 2. Crear un proyecto en CircleCI y configurarlo en relación al repositorio de GitHub.
 
@@ -80,3 +102,43 @@ Job test
 Ejecución de los tests
 
 ![Running tests step](./img/running-tests-circleci.png)
+
+## Creación del sistema de integración continua en Github Actions
+
+Para crear el sistema de integración continua en Github Actions, debemos seguir los siguientes pasos:
+
+1. Crear un nuevo workflow que se ejecute cada vez que se construye una nueva imagen de Docker.
+
+```yml
+name: Run API tests
+
+on:
+  workflow_run:
+    workflows: ["Create and publish a Docker image to GitHub Container Registry"]
+    branches: [main]
+    types: [completed]
+
+jobs:
+  run_test:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run:
+          docker run -t -v `pwd`:/app/test ramongarver/muii-ccfi
+```
+
+Ejecuciones del workflow
+
+![Ejecuciones del workflow](./img/workflow-executions-actions.png)
+
+Pipeline del proyecto
+
+![Pipeline del proyecto](./img/pipeline-actions.png)
+
+Ejecución de los tests
+
+![Running tests step](./img/running-tests-actions.png)
+
+## Conclusión
