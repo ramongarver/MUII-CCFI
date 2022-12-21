@@ -140,5 +140,3 @@ Pipeline del proyecto
 Ejecución de los tests
 
 ![Running tests step](./img/running-tests-actions.png)
-
-## Conclusión
