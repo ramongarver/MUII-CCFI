@@ -1,47 +1,84 @@
 import { PrismaClient } from '@prisma/client';
-
-enum ContentTypes {
-  MOVIE = 'MOVIE',
-  SERIES = 'SERIES',
-}
+import { CONTENTS_SEED, LIST_ELEMENTS_SEED, USERS_SEED } from './data';
 
 // Initialize Prisma Client
 const prisma = new PrismaClient();
 
+// Create users
+const seedUsers = () => {
+  Promise.all(
+    USERS_SEED.map((createUserDto) =>
+      prisma.user.upsert({
+        where: { email: createUserDto.email },
+        update: {},
+        create: {
+          email: createUserDto.email,
+          password: createUserDto.password,
+          name: createUserDto.name,
+        },
+      }),
+    ),
+  )
+    .then((i) => console.info('[SEED] Succussfully create user records', i))
+    .catch((e) => console.error('[SEED] Failed to create user records', e));
+};
+
+// Create contents
+const seedContents = () => {
+  Promise.all(
+    CONTENTS_SEED.map((createContentDto) =>
+      prisma.content.upsert({
+        where: { title: createContentDto.title },
+        update: {},
+        create: {
+          title: createContentDto.title,
+          type: createContentDto.type,
+          genre: createContentDto.genre,
+          description: createContentDto.description,
+          director: createContentDto.director,
+          year: createContentDto.year,
+          rating: createContentDto.rating,
+        },
+      }),
+    ),
+  )
+    .then((i) => console.info('[SEED] Succussfully create content records', i))
+    .catch((e) => console.error('[SEED] Failed to create content records', e));
+};
+
+// Create list elements
+const seedListElements = () => {
+  Promise.all(
+    LIST_ELEMENTS_SEED.map((createListElementDto) =>
+      prisma.listElement.upsert({
+        where: {
+          userId_listType_contentId: {
+            userId: createListElementDto.userId,
+            listType: createListElementDto.listType,
+            contentId: createListElementDto.contentId,
+          },
+        },
+        update: {},
+        create: {
+          userId: createListElementDto.userId,
+          listType: createListElementDto.listType,
+          contentId: createListElementDto.contentId,
+        },
+      }),
+    ),
+  )
+    .then((i) =>
+      console.info('[SEED] Succussfully create list element records', i),
+    )
+    .catch((e) =>
+      console.error('[SEED] Failed to create list element records', e),
+    );
+};
+
 async function main() {
-  // Create two content items
-  // - First content item
-  const content1 = await prisma.content.upsert({
-    where: { title: "Harry Potter and the Philosopher's Stone" },
-    update: {},
-    create: {
-      title: "Harry Potter and the Philosopher's Stone",
-      type: ContentTypes.MOVIE,
-      genre: 'FANTASY',
-      description:
-        'Harry Potter is a British-American film series based on the Harry Potter novels by author J. K. Rowling.',
-      director: 'Chris Columbus',
-      year: '2001',
-      rating: 7.6,
-    },
-  });
-  // - Second content item
-  const content2 = await prisma.content.upsert({
-    where: { title: 'Mr. Robot' },
-    update: {},
-    create: {
-      title: 'Mr. Robot',
-      type: ContentTypes.SERIES,
-      genre: 'SCI-FI',
-      description:
-        'A hacker with social anxiety disorder and clinical depression works as a cybersecurity engineer by day and as a vigilante hacker by night.',
-      director: 'Sam Esmail',
-      year: '2015',
-      rating: 8.6,
-    },
-  });
-  // - Print the result
-  console.log({ content1, content2 });
+  seedUsers();
+  seedContents();
+  seedListElements();
 }
 
 main()
