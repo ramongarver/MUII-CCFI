@@ -8,7 +8,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Remembilm')
     .setDescription('The Remembilm API description')
-    .setVersion('0.1')
+    .setVersion('0.0.1')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
