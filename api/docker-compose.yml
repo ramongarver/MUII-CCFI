@@ -2,15 +2,37 @@ version: '3.8'
 
 services:
   postgres:
+    container_name: postgres_container
     image: postgres:15.1
-    restart: always
+    restart: unless-stopped
     environment:
-      - POSTGRES_USER=remembilm
-      - POSTGRES_PASSWORD=postgres
+      POSTGRES_USER: ${POSTGRES_USER:-remembilm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
       - 5432:5432
+    networks:
+      - postgres
+
+  pgAdmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:6.18
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@remembilm.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - ${PGADMIN_PORT:-5050}:80
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
 
 volumes:
   postgres:
+  pgadmin:
